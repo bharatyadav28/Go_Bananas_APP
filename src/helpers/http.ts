@@ -9,7 +9,7 @@ export const fetchTodos = async ({ queryKey }: { queryKey: any }) => {
     url += `completed=${completed === "true" ? true : false}&`;
   }
   if (userId) {
-    url += `?userId=${userId}`;
+    url += `userId=${userId}`;
   }
 
   const response = await fetch(url);
